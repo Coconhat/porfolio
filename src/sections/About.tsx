@@ -10,7 +10,7 @@ import ReactIcon from "@/assets/icons/react.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import React from "react";
 import { TechIcon } from "@/components/TechIcon";
-import mapImage from "@/assets/images/maploc.jpg";
+import mapImage from "@/assets/images/map6.jpg";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
