@@ -1,3 +1,5 @@
+"use client";
+
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -5,6 +7,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import { TypeAnimation } from "react-type-animation";
 
 export const HeroSection = () => {
   return (
@@ -68,8 +71,41 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Building Exceptional User Experiences
+            Building Exceptional
+            <div
+              style={{
+                minHeight: "1.5em",
+                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <TypeAnimation
+                sequence={[
+                  "User Experiences",
+                  800,
+                  "Digital Interactions",
+                  800,
+                  "User Journeys",
+                  800,
+                  "Designs",
+                  800,
+                  "Digital Engagements",
+                  1000
+                ]}
+                wrapper="span"
+                cursor={true}
+                repeat={Infinity}
+                speed={40}
+                style={{
+                  display: "inline-block",
+                  whiteSpace: "nowrap",
+                }}
+              />
+            </div>
           </h1>
+
           <p className="mt-4 text-center text-white/60 md:text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
             ratione vero autem repudiandae provident, laboriosam eos maxime hic
@@ -77,6 +113,7 @@ export const HeroSection = () => {
             eaque non totam atque.
           </p>
         </div>
+
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4 z-30">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
             <span className="font-semibold">Explore My Work</span>
