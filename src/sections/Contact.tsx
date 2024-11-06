@@ -18,12 +18,11 @@ export const ContactSection = () => {
                 Like what you see?
               </h2>
               <p className="text-sm mt-2 md:text-base">
-                Let's connect and discuss how I can help you achieve your goals.
+                Let&apos;s connect and discuss how I can help you achieve your
+                goals.
               </p>
             </div>
             <div className="lg:ml-20">
-             
-             
               <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
                 <span className="font-semibold">Get in touch</span>
                 <ArrowUpRightIcon className="w-4 h-4" />
