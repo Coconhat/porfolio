@@ -179,10 +179,11 @@ export const HeroSection = () => {
           </h1>
 
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-            ratione vero autem repudiandae provident, laboriosam eos maxime hic
-            consequatur ut dolorem dolore excepturi temporibus nesciunt est
-            eaque non totam atque.
+            Hi! I&rsquo;m Nhat Vu. I&rsquo;m passionate about building
+            exceptional digital experiences that make an impact through
+            user-centered design and seamless functionality. My goal is to bring
+            ideas to life with thoughtful design and technical precision,
+            helping you connect with your audience and achieve your vision.
           </p>
         </div>
 
