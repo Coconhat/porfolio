@@ -8,6 +8,10 @@ import HTMLIcon from "@/assets/icons/html5.svg";
 import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import GithubIcon from "@/assets/icons/github.svg";
+import CPlusPlusIcon from "@/assets/icons/cpluspluslogo.svg";
+import NextJsIcon from "@/assets/icons/nextjs-2.svg";
+import FramerMotionIcon from "@/assets/icons/framer-motion.svg";
+import TailWindIcon from "@/assets/icons/tailwind-css-wordmark.svg";
 import React, { useRef } from "react";
 import mapImage from "@/assets/images/map6.jpg";
 import smileMemoji from "@/assets/images/memoji-smile.png";
@@ -74,6 +78,22 @@ const toolboxItems = [
   {
     title: "Github",
     iconType: GithubIcon,
+  },
+  {
+    title: "C++",
+    iconType: CPlusPlusIcon,
+  },
+  {
+    title: "Next.JS",
+    iconType: NextJsIcon,
+  },
+  {
+    title: "Framer Motion",
+    iconType: FramerMotionIcon,
+  },
+  {
+    title: "Tailwind",
+    iconType: TailWindIcon,
   },
 ];
 

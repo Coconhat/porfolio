@@ -20,6 +20,7 @@ export default function Home() {
       <section id="about">
         <AboutSection />
       </section>
+      <TapeSection />
       <section id="contact">
         <ContactSection />
       </section>
