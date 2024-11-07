@@ -56,6 +56,12 @@ const hobbies = [
     left: "5%",
     top: "65%",
   },
+  {
+    title: "Chess",
+    emoji: "♟️",
+    left: "43%",
+    top: "65%",
+  },
 ];
 
 const toolboxItems = [
