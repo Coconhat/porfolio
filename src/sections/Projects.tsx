@@ -4,6 +4,7 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import apodnasa from "@/assets/images/apodnasa.png";
 import currencyconverter from "@/assets/images/currencyconverter3.png";
+import brainrot from "@/assets/images/brainrot.png";
 const portfolioProjects = [
   {
     company: "",
@@ -41,11 +42,32 @@ const portfolioProjects = [
       },
       {
         title:
-          ": Uses a real-time currency exchange API to provide up-to-date conversion rates.",
+          "Uses a real-time currency exchange API to provide up-to-date conversion rates.",
       },
     ],
     link: "https://coconhat.github.io/Currency-converter/",
     image: currencyconverter,
+  },
+  {
+    company: "",
+    year: "2024",
+    title: "Currency Converter",
+    results: [
+      {
+        title:
+          "Transforms your regular text into hilarious 'brainrot' language with meme terms and phrases.",
+      },
+      {
+        title:
+          "Uses custom logic to add unexpected and funny terms to your sentences.",
+      },
+      {
+        title:
+          "Perfect for meme lovers, creating wild text transformations with every sentence.",
+      },
+    ],
+    link: "https://coconhat.github.io/brainrot-converter/",
+    image: brainrot,
   },
 ];
 
