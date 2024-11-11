@@ -51,7 +51,7 @@ const portfolioProjects = [
   {
     company: "",
     year: "2024",
-    title: "Currency Converter",
+    title: "Brain rot translator",
     results: [
       {
         title:
