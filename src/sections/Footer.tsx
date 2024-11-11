@@ -26,6 +26,27 @@ const footerLinks = [
 ];
 
 export const Footer = () => {
+  const [hoverStates, setHoverStates] = useState(
+    footerLinks.reduce((acc, link) => {
+      acc[link.title] = false;
+      return acc;
+    }, {} as Record<string, boolean>)
+  );
+
+  const handleMouseEnter = (title: string) => {
+    setHoverStates((prevState) => ({
+      ...prevState,
+      [title]: true,
+    }));
+  };
+
+  const handleMouseLeave = (title: string) => {
+    setHoverStates((prevState) => ({
+      ...prevState,
+      [title]: false,
+    }));
+  };
+
   return (
     <footer className="relative overflow-x-clip z-10">
       <div className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/30 [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)] z-0"></div>
@@ -34,8 +55,6 @@ export const Footer = () => {
         <div className="border-t border-white/15 py-6 text-sm flex flex-col items-center gap-8 md:flex-row md:justify-between z-10">
           <nav className="flex flex-col items-center gap-8 md:flex-row">
             {footerLinks.map((link, index) => {
-              const [isHovered, setIsHovered] = useState(false);
-
               return (
                 <a
                   key={index}
@@ -44,15 +63,15 @@ export const Footer = () => {
                   className="inline-flex items-center gap-1.5 z-10"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
+                  onMouseEnter={() => handleMouseEnter(link.title)}
+                  onMouseLeave={() => handleMouseLeave(link.title)}
                 >
                   <span>
                     <UseAnimations
                       animation={link.animation}
                       size={24}
                       strokeColor="#fff"
-                      autoplay={isHovered}
+                      autoplay={hoverStates[link.title]}
                     />
                   </span>
                   <span className="font-semibold">{link.title}</span>
