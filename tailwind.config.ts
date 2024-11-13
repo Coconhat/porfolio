@@ -27,11 +27,20 @@ const config: Config = {
         serif: "var(--font-serif)",
       },
       animation: {
+        "soft-bounce": "softBounce 1s ease-in-out infinite", 
         "ping-large": "ping-large 1s ease-in-out infinite",
         "move-left": "move-left 1s linear infinite",
         "move-right": "move-right 1s linear infinite",
       },
       keyframes: {
+        softBounce: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-2px)", 
+          },
+        },
         "ping-large": {
           "75%, 100%": {
             transform: "scale(3)",
@@ -46,7 +55,6 @@ const config: Config = {
             transform: "translateX(-50%)",
           },
         },
-
         "move-right": {
           "0%": {
             transform: "translateX(-50%)",

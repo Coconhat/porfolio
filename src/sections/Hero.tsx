@@ -128,11 +128,6 @@ export const HeroSection = () => {
 
       <div className="container relative z-20">
         <div className="flex flex-col items-center">
-          <Image
-            src={memojiImage}
-            className="size-[100px]"
-            alt="Person peeking from behind laptop"
-          />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
             <div className="bg-green-500 size-2.5 rounded-full relative ">
               <div className="bg-green-500 absolute inset-0 animate-ping-large rounded-full"></div>
@@ -180,11 +175,18 @@ export const HeroSection = () => {
           </h1>
 
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Hi! I&rsquo;m Nhat Vu. I&rsquo;m passionate about building
-            exceptional digital experiences that make an impact through
-            user-centered design and seamless functionality. My goal is to bring
-            ideas to life with thoughtful design and technical precision,
-            helping you connect with your audience and achieve your vision.
+            Hi! I&rsquo;m{" "}
+            <a
+              href="https://github.com/Coconhat"
+              className="relative inline-block text-white/80 hover:text-white before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-transparent hover:before:bg-black before:z-[-1] animate-soft-bounce hover:animate-none"
+            >
+              Nhat Vu
+            </a>
+            . I&rsquo;m passionate about building exceptional digital
+            experiences that make an impact through user-centered design and
+            seamless functionality. My goal is to bring ideas to life with
+            thoughtful design and technical precision, helping you connect with
+            your audience and achieve your vision.
           </p>
         </div>
 
