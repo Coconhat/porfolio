@@ -13,32 +13,31 @@ interface Item {
 
 let notifications = [
   {
-    name: "Payment received",
-    description: "Magic UI",
+    name: "Brain Rot Translator",
+    description: "Transforms normal text into 'brainrot'.",
     time: "15m ago",
-
-    icon: "💸",
+    icon: "🌀",
     color: "#00C9A7",
   },
   {
-    name: "User signed up",
-    description: "Magic UI",
+    name: "Fun Transformation",
+    description: "just give up -> put the fries in the bag",
     time: "10m ago",
     icon: "👤",
     color: "#FFB800",
   },
   {
-    name: "New message",
-    description: "Magic UI",
+    name: "Perfect for Memes",
+    description: "Add unexpected twists to your sentences effortlessly.",
     time: "5m ago",
     icon: "💬",
     color: "#FF3D71",
   },
   {
-    name: "New event",
-    description: "Magic UI",
+    name: "Try It Now",
+    description: "Visit the link below",
     time: "2m ago",
-    icon: "🗞️",
+    icon: "🌐",
     color: "#1E86FF",
   },
 ];
