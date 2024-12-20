@@ -14,7 +14,7 @@ export const ToolboxItems = ({
   return (
     <div
       className={twMerge(
-        "flex [mask-image:linear-gradient(to right, transparent, black 10%, black 90%, transparent)]",
+        "flex [mask-image:linear-gradient(to right, transparent, black 10%, black 90%, transparent)] bg-background",
         className
       )}
     >
@@ -29,10 +29,12 @@ export const ToolboxItems = ({
             {items.map((item) => (
               <div
                 key={item.title}
-                className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg"
+                className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg text-vercel-black"
               >
                 <TechIcon component={item.iconType} />
-                <span className="font-semibold">{item.title}</span>
+                <span className="font-semibold text-vercel-black">
+                  {item.title}
+                </span>
               </div>
             ))}
           </Fragment>

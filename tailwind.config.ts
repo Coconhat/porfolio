@@ -22,6 +22,26 @@ const config: Config = {
       },
     },
     extend: {
+      colors: {
+        vercel: {
+          black: "#000000",
+          white: "#ffffff",
+          gray: {
+            100: "#eaeaea",
+            200: "#999999",
+            300: "#888888",
+            400: "#666666",
+            500: "#444444",
+            600: "#333333",
+            700: "#111111",
+          },
+        },
+        background: '#ffffff',
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        serif: ["Calistoga", "serif"],
+      },
       fontFamily: {
         sans: "var(--font-sans)",
         serif: "var(--font-serif)",

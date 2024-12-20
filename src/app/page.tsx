@@ -8,7 +8,7 @@ import { Footer } from "@/sections/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-background">
       <Header />
       <section id="hero">
         <HeroSection />

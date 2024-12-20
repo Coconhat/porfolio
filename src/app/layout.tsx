@@ -12,7 +12,7 @@ const calistago = Calistoga({
 });
 export const metadata: Metadata = {
   title: "My Portfolio",
-  description: "Created with the help of Frontend Tribe",
+  description: "A portfolio website built with Next.js and Tailwind CSS.",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
         className={twMerge(
           inter.variable,
           calistago.variable,
-          "bg-gray-900 text-white antialiased font-sans"
+          "bg-vercel-gray-900 text-vercel-white antialiased font-sans"
         )}
       >
         <Analytics />
