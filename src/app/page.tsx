@@ -5,16 +5,17 @@ import { TapeSection } from "@/sections/Tape";
 import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
+import { BentoDemo } from "@/components/ui/BentoDemo";
 
 export default function Home() {
   return (
-    <div className="bg-background">
+    <div className="w-full h-128 mx-4 my-4 p-4 bg-background">
       <Header />
       <section id="hero">
         <HeroSection />
       </section>
       <section id="projects">
-        <ProjectsSection />
+        <BentoDemo />
       </section>
 
       <TapeSection />
