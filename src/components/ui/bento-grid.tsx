@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
-import ShimmerButton from "@/components/ui/shimmer-button"; // Ensure correct import
+import ShimmerButton from "@/components/ui/Shimmer-button"; 
 
 type BentoGridProps = {
   children: ReactNode;
@@ -67,10 +67,10 @@ const BentoCard = ({
       )}
     >
       <a href={href} className="pointer-events-auto">
-        <button className="text-vercel-white bg-vercel-black inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-700 mt-4 group-hover:bg-vercel-black group-hover:text-vercel-white">
+        <ShimmerButton className="text-vercel-white bg-vercel-black inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-700 mt-4 group-hover:bg-vercel-black group-hover:text-vercel-white">
           {cta}
           <ArrowRightIcon className="ml-2 h-4 w-4" />
-        </button>
+        </ShimmerButton>
       </a>
     </div>
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
