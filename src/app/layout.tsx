@@ -3,7 +3,7 @@ import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { Analytics } from "@vercel/analytics/react";
-import React from "react";
+import React, { ReactNode } from "react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistago = Calistoga({
@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   description: "A portfolio website built with Next.js and Tailwind CSS.",
 };
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return <div className="w-full h-128 mx-4 my-4 p-4">{children}</div>;
 };
 
