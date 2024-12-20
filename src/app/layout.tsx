@@ -21,7 +21,7 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  return <div className="w-full h-128 mx-4 my-4 p-4">{children}</div>;
+  return <div className="w-full h-128 my-4 p-4">{children}</div>;
 };
 
 export default function RootLayout({

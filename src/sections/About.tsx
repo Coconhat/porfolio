@@ -18,6 +18,7 @@ import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
+import { ParticlesDemo } from "@/components/ui/Particle";
 
 const hobbies = [
   {
@@ -108,6 +109,7 @@ export const AboutSection = () => {
   return (
     <section className="bg-background">
       <div className="py-20 lg:py-28 bg-vercel-gray-900 text-vercel-black">
+        <ParticlesDemo />
         <div className="container">
           <SectionHeader
             eyebrow="About me"
@@ -164,10 +166,10 @@ export const AboutSection = () => {
                       drag
                       dragConstraints={constraintRef}
                     >
-                      <span className="font-medium text-vercel-white">
+                      <span className="font-medium text-vercel-black border border-vercel-black/20 rounded-full px-2 py-1.5">
                         {hobby.title}
+                        <span>{hobby.emoji}</span>
                       </span>
-                      <span>{hobby.emoji}</span>
                     </motion.div>
                   ))}
                 </div>

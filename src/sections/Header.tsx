@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <div className="flex justify-center items-center fixed top-3 w-full z-10">
-      <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
+    <div className="flex justify-center items-center fixed top-0 left-0 right-0 z-10 h-16 bg-vercel-white/90 backdrop-blur">
+      <nav className="flex gap-4 p-2 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         <Link href="#hero">
           <span className="nav-item">Home</span>
         </Link>
@@ -17,7 +17,7 @@ export const Header = () => {
         </Link>
 
         <Link href="#contact">
-          <span className="nav-item bg-white text-grey-900 hover:bg-white/70 text-gray-900">
+          <span className="nav-item bg-white text-vercel-black ">
             Contact
           </span>
         </Link>

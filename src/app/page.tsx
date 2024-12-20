@@ -8,7 +8,7 @@ import { BentoDemo } from "@/components/ui/BentoDemo";
 
 export default function Home() {
   return (
-    <div className="w-full h-128 mx-4 my-4 p-4 bg-background">
+    <div className="w-full h-128 mx-auto my-4 p-4 bg-background">
       <Header />
       <section id="hero">
         <HeroSection />

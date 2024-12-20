@@ -6,7 +6,7 @@ export const ContactSection = () => {
   return (
     <section className="bg-background">
       <div className="py-16 pt-12 lg:py-24 lg:pt-20 bg-vercel-white text-vercel-black">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="bg-gray-900 text-white py-8 px-10 rounded-3xl text-center md:text-left relative overflow-hidden z-0">
             <div
               className="absolute inset-0 opacity-5 -z-10"

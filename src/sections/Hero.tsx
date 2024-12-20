@@ -9,19 +9,19 @@ import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
 import React from 'react';
 import { ParticlesDemo } from "@/components/ui/Particle";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+
 
 export const HeroSection = () => {
   return (
-    <div className="w-full h-128 mx-4 my-4 p-4">
-      <section className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip bg-vercel-white text-vercel-black">
+    <div className="w-full h-128 mx-auto my-2 p-4">
+      <section className="py-24 md:py-36 lg:py-48 relative z-0 overflow-x-clip bg-vercel-white text-vercel-black">
         <ParticlesDemo />
-        <div className="absolute inset-0 z-10">
-         
-        </div>
+        <div className="absolute inset-0 z-10"></div>
         <div className="container relative z-20">
           <div className="flex flex-col items-start">
             <div className="bg-vercel-black border border-vercel-black px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
-              <div className="bg-green-500 size-2.5 rounded-full relative ">
+              <div className="bg-green-500 size-2.5 rounded-full relative">
                 <div className="bg-green-950 absolute inset-0 animate-ping-large rounded-full"></div>
               </div>
               <div className="text-sm font-medium text-white">
@@ -30,7 +30,7 @@ export const HeroSection = () => {
             </div>
           </div>
           <div className="max-w-lg text-left">
-            <h1 className="font-serif text-3xl md:text-5xl mt-8 tracking-wide">
+            <h1 className="font-serif text-3xl md:text-5xl mt-6 tracking-wide">
               Building Exceptional
               <div
                 style={{
@@ -66,7 +66,7 @@ export const HeroSection = () => {
               </div>
             </h1>
 
-            <p className="mt-4 text-gray-400 md:text-lg">
+            <p className="mt-2 text-gray-400 md:text-lg">
               Hi! I&rsquo;m{" "}
               <a
                 href="https://github.com/Coconhat"
@@ -74,15 +74,14 @@ export const HeroSection = () => {
               >
                 Nhat Vu
               </a>
-              . I&rsquo;m passionate about building exceptional digital
-              experiences that make an impact through user-centered design and
-              seamless functionality. My goal is to bring ideas to life with
-              thoughtful design and technical precision, helping you connect with
-              your audience and achieve your vision.
+              . I&rsquo;m a 2nd year De La Salle Lipa student who loves building
+              tools to solve real-world problems. I enjoy taking on challenges
+              that push me to learn new skills while creating solutions that
+              matter.
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-start items-center mt-8 gap-4 z-30">
+          <div className="flex flex-col md:flex-row justify-start items-center mt-4 gap-4 z-30">
             <Link href="#projects">
               <button className="inline-flex items-center gap-2 border border-gray-700 px-6 h-12 rounded-xl">
                 <span className="font-semibold">Explore My Work</span>
@@ -90,10 +89,10 @@ export const HeroSection = () => {
               </button>
             </Link>
             <Link href="#contact">
-              <button className="inline-flex items-center gap-2 border border-gray-700 bg-gray-800 text-white h-12 px-6 rounded-xl">
+              <RainbowButton>
                 <span>👋</span>
                 <span className="font-semibold">Let&apos;s Connect</span>
-              </button>
+              </RainbowButton>
             </Link>
           </div>
         </div>
