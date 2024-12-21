@@ -113,8 +113,9 @@ export const AboutSection = () => {
         <div className="container">
           <SectionHeader
             eyebrow="About me"
-            title="A glimpse Into My World"
+            title="A Glimpse Into My World"
             description="Learn more about who I am, What I do, and what inspire me"
+            className="font-bold"
           />
           <div className="mt-20 flex flex-col gap-8">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3 ">
@@ -122,6 +123,7 @@ export const AboutSection = () => {
                 <CardHeader
                   title="My Reads"
                   description="Explore the books shaping my perspectives."
+                  className="font-bold"
                 />
 
                 <div className="w-40 mx-auto mt-2 md:mt-0">
@@ -130,9 +132,9 @@ export const AboutSection = () => {
               </Card>
               <Card className="h-[320px] md:col-span-3 lg:col-span-2">
                 <CardHeader
-                  title="My toolbox"
+                  title="My Toolbox"
                   description="Explore the technologies and tools I use to craft exceptional digital experiences."
-                  className=""
+                  className="font-bold"
                 />
                 <ToolboxItems
                   items={toolboxItems}
@@ -151,7 +153,7 @@ export const AboutSection = () => {
                 <CardHeader
                   title="Beyond the Code"
                   description="Discover my interests and hobbies outside of the digital space."
-                  className="px-6 py-6"
+                  className="px-6 py-6 font-bold"
                 />
 
                 <div className="relative flex-1" ref={constraintRef}>
@@ -166,7 +168,7 @@ export const AboutSection = () => {
                       drag
                       dragConstraints={constraintRef}
                     >
-                      <span className="font-medium text-vercel-black border border-vercel-black/20 rounded-full px-2 py-1.5">
+                      <span className="font-medium text-vercel-black border border-vercel-black/20 rounded-full px-2 py-1.5 font-medium">
                         {hobby.title}
                         <span>{hobby.emoji}</span>
                       </span>

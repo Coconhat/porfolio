@@ -24,14 +24,14 @@ export const HeroSection = () => {
               <div className="bg-green-500 size-2.5 rounded-full relative">
                 <div className="bg-green-950 absolute inset-0 animate-ping-large rounded-full"></div>
               </div>
-              <div className="text-sm font-medium text-white">
+              <div className="text-sm font-bold text-white">
                 Available for new projects
               </div>
             </div>
           </div>
           <div className="max-w-lg text-left">
-            <h1 className="font-serif text-3xl md:text-5xl mt-6 tracking-wide">
-              Building Exceptional
+            <h1 className="text-3xl md:text-5xl mt-6 tracking-wide font-bold">
+              Building Great
               <div
                 style={{
                   minHeight: "1.5em",

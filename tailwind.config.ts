@@ -84,8 +84,8 @@ const config: Config = {
   			'color-5': 'hsl(var(--color-5))'
   		},
   		fontFamily: {
-  			sans: 'var(--font-sans)',
-  			serif: 'var(--font-serif)'
+  			sans: ['Geist', 'sans-serif'],
+  			serif: ['Geist', 'serif']
   		},
   		animation: {
   			'soft-bounce': 'softBounce 1s ease-in-out infinite',

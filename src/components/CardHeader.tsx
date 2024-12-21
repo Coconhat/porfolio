@@ -19,7 +19,7 @@ export const CardHeader = ({
     >
       <div className="inline-flex items-center gap-2">
         <StarIcon className="size-9 text-vercel-gray-500" />
-        <h3 className="font-serif text-3xl text-vercel-black">{title}</h3>
+        <h3 className="text-3xl text-vercel-black font-bold">{title}</h3>
       </div>
       <p className="text-sm lg:text-base max-w-xs text-vercel-gray-400 mt-2">
         {description}
