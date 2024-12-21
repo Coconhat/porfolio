@@ -4,7 +4,6 @@ import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { Analytics } from "@vercel/analytics/react";
 import React, { ReactNode } from "react";
-import { ParticlesDemo } from "@/components/ui/Particle";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistago = Calistoga({
@@ -13,8 +12,13 @@ const calistago = Calistoga({
   weight: ["400"],
 });
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A portfolio website built with Next.js and Tailwind CSS.",
+  title: "Nhat Vu's Portfolio",
+  description: "My portfolio built with Next.js and Tailwind CSS.",
+  openGraph: {
+    title: "Nhat Vu's Portfolio",
+    description: "My portfolio built with Next.js and Tailwind CSS.",
+    images: [], 
+  },
 };
 
 interface LayoutProps {
@@ -24,9 +28,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="relative w-full h-full">
-      <div className="relative z-10 w-full h-full">
-        {children}
-      </div>
+      <div className="relative z-10 w-full h-full">{children}</div>
     </div>
   );
 };
@@ -45,7 +47,6 @@ export default function RootLayout({
           "bg-vercel-gray-900 text-vercel-white antialiased font-sans"
         )}
       >
-        <ParticlesDemo />
         <Analytics />
         <Layout>{children}</Layout>
       </body>

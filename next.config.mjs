@@ -43,6 +43,10 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
+  compress: true,
 };
 
 export default nextConfig;

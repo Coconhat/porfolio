@@ -1,10 +1,5 @@
 "use client";
-import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
-import grainImage from "@/assets/images/grain.jpg";
-import StarIcon from "@/assets/icons/star.svg";
-import { HeroOrbit } from "@/components/HeroOrbit";
-import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
 import React from 'react';
