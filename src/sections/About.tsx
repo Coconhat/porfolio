@@ -115,7 +115,7 @@ export const AboutSection = () => {
             eyebrow="About me"
             title="A Glimpse Into My World"
             description="Learn more about who I am, What I do, and what inspire me"
-            className="font-bold"
+            
           />
           <div className="mt-20 flex flex-col gap-8">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3 ">
@@ -168,7 +168,7 @@ export const AboutSection = () => {
                       drag
                       dragConstraints={constraintRef}
                     >
-                      <span className="font-medium text-vercel-black border border-vercel-black/20 rounded-full px-2 py-1.5 font-medium">
+                      <span className="font-medium text-vercel-black border border-vercel-black/20 rounded-full px-2 py-1.5 ">
                         {hobby.title}
                         <span>{hobby.emoji}</span>
                       </span>
