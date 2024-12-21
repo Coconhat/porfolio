@@ -14,11 +14,11 @@ export function ParticlesDemo() {
   }, [resolvedTheme]);
 
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center overflow-hidden">
+    <div className="absolute inset-0 flex flex-col items-center justify-center overflow-hidden pointer-events-none z-[-1]">
       <Particles
         className="absolute inset-0"
-        quantity={200}
-        ease={80}
+        quantity={250}
+        ease={100}
         color={color}
         refresh
       />

@@ -18,7 +18,7 @@ export const HeroSection = () => {
       <section className="py-24 md:py-36 lg:py-48 relative z-0 overflow-x-clip bg-vercel-white text-vercel-black">
         <ParticlesDemo />
         <div className="absolute inset-0 z-10"></div>
-        <div className="container relative z-20">
+        <div className="container relative z-30">
           <div className="flex flex-col items-start">
             <div className="bg-vercel-black border border-vercel-black px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
               <div className="bg-green-500 size-2.5 rounded-full relative">

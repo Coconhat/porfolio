@@ -4,6 +4,7 @@ import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { Analytics } from "@vercel/analytics/react";
 import React, { ReactNode } from "react";
+import { ParticlesDemo } from "@/components/ui/Particle";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistago = Calistoga({
@@ -21,7 +22,13 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  return <div className="w-full h-128 my-4 p-4">{children}</div>;
+  return (
+    <div className="relative w-full h-full">
+      <div className="relative z-10 w-full h-full">
+        {children}
+      </div>
+    </div>
+  );
 };
 
 export default function RootLayout({
@@ -38,6 +45,7 @@ export default function RootLayout({
           "bg-vercel-gray-900 text-vercel-white antialiased font-sans"
         )}
       >
+        <ParticlesDemo />
         <Analytics />
         <Layout>{children}</Layout>
       </body>
