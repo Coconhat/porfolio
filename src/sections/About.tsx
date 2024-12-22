@@ -125,14 +125,19 @@ export const AboutSection = () => {
         <div className="container">
           <SectionHeader
             eyebrow="About me"
-            title="A Glimpse Into My World"
+            title={
+              <SparklesText
+                text="A Glimpse Into My World"
+                className="text-3xl md:text-5xl text-center mt-6 text-vercel-black font-semibold"
+              />
+            }
             description="Learn more about who I am, What I do, and what inspire me"
           />
           <div className="mt-20 flex flex-col gap-8">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3 ">
               <Card className="h-[320px] md:col-span-2 lg:col-span-1">
                 <CardHeader
-                  title="About me"
+                  title="Who am I?"
                   description={
                     <RainbowButton
                       onClick={handleModalOpen}
@@ -169,7 +174,7 @@ export const AboutSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
               <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
                 <CardHeader
-                  title="Beyond the Code"
+                  title="Beyond the code"
                   description="Discover my interests and hobbies outside of the digital space."
                   className="px-6 py-6 font-bold"
                 />
@@ -225,8 +230,8 @@ export const AboutSection = () => {
             <div className=" p-6 sm:p-8 z-[9999] ">
               <div className="mb-6 text-center z-[9999]">
                 <SparklesText
-                  text="Hello, I'm Nhat Vu"
-                  className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent text-vercel-black"
+                  text="Hello, I'm Nhat Vu Le"
+                  className="text-3xl font-bold text-vercel-black"
                 />
 
                 <p className="mt-2 text-gray-600 dark:text-gray-300">

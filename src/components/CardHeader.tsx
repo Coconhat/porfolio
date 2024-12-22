@@ -6,8 +6,8 @@ export const CardHeader = ({
   description,
   className,
 }: {
-  title: string;
-  description: string | React.ReactNode; 
+  title: string | React.ReactNode;
+  description: string | React.ReactNode;
   className?: string;
 }) => {
   return (

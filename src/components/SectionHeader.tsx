@@ -3,16 +3,16 @@ export const SectionHeader = ({
   eyebrow,
   description,
 }: {
-  title: string;
+  title: string | React.ReactNode;
   eyebrow: string;
   description: string;
 }) => {
   return (
     <header className="bg-background">
       <div className="flex justify-center">
-        <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-vercel-gray-600 to-vercel-gray-300 bg-clip-text text-transparent">
+        <div className="uppercase font-semibold tracking-widest bg-gradient-to-r from-vercel-gray-600 to-vercel-gray-300 bg-clip-text text-transparent">
           {eyebrow}
-        </p>
+        </div>
       </div>
       <h2 className="text-3xl md:text-5xl text-center mt-6 text-vercel-black font-semibold">
         {title}

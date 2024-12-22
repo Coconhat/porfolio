@@ -72,7 +72,7 @@ export const Footer = () => {
                     <UseAnimations
                       animation={link.animation}
                       size={34}
-                      strokeColor="#fff"
+                      strokeColor="#000000"
                       autoplay={hoverStates[link.title]}
                     />
                   </span>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import React from 'react';
 import { ParticlesDemo } from "@/components/ui/Particle";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import SparklesText from "@/components/ui/sparkles-text";
 
 
 export const HeroSection = () => {
@@ -26,7 +27,7 @@ export const HeroSection = () => {
           </div>
           <div className="max-w-lg text-left">
             <h1 className="text-3xl md:text-5xl mt-6 tracking-wide font-bold">
-              Building Great
+              {<SparklesText text="Buiding Great"/>}
               <div
                 style={{
                   minHeight: "1.5em",
