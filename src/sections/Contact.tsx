@@ -32,7 +32,7 @@ export const ContactSection: React.FC = () => {
                   <h2 className="text-2xl md:text-3xl">Like what you see?</h2>
                 )}
                 {isModalOpen ? (
-                  "Great, you made it to the form! Looking forward to hearing from you!"
+                  "Great, you made it to the form! I can't wait to hear from you!"
                 ) : (
                   <p className="text-sm mt-2 md:text-base">
                     Let&apos;s connect and discuss how I can help you achieve
