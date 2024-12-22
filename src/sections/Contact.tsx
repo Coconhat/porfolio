@@ -43,11 +43,11 @@ export const ContactSection: React.FC = () => {
               <div className="lg:ml-20 z-20">
                 <RainbowButton
                   className="text-white bg-vercel-black inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-700 cursor-pointer"
-                  onClick={() => handleModalOpen()}
+                  onClick={handleModalOpen}
                 >
                   <span className="font-semibold">
                     {isModalOpen
-                      ? "Looking foward to work with you!"
+                      ? "Looking forward to work with you!"
                       : "Get in touch"}
                   </span>
                   <ArrowUpRightIcon className="w-4 h-4" />
@@ -58,7 +58,7 @@ export const ContactSection: React.FC = () => {
         </div>
       </div>
 
-      {isModalOpen && <ContactForm />}
+      {isModalOpen && <ContactForm handleModalOpen={handleModalOpen} />}
     </section>
   );
 };
