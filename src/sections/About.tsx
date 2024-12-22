@@ -183,11 +183,9 @@ export const AboutSection = () => {
                   src={mapImage}
                   alt="map"
                   className="h-full w-full object-cover object-left-top"
-                  style={{ filter: "grayscale(100%)" }}
+                  
                 />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full  after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-vercel-gray-700">
-                  <div className="absolute inset-0 rounded-full bg-vercel-gray-800 -z-20 animate-ping [animation-duration:2s]"></div>
-                  <div className="absolute inset-0 rounded-full bg-vercel-gray-800 -z-10"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full">
                   <Image src={smileMemoji} alt="memoji" className="size-20" />
                 </div>
               </Card>
