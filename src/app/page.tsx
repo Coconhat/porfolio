@@ -23,10 +23,8 @@ export default function Home() {
       </section>
       <TapeSection />
       <section id="contact">
-        <ContactSection />
+        <Footer />
       </section>
-
-      <Footer />
     </div>
   );
 }

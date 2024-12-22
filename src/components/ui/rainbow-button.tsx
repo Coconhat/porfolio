@@ -7,6 +7,7 @@ interface RainbowButtonProps
 export function RainbowButton({
   children,
   className,
+  onClick,
   ...props
 }: RainbowButtonProps) {
   return (
@@ -25,6 +26,7 @@ export function RainbowButton({
 
         className,
       )}
+      onClick={onClick}
       {...props}
     >
       {children}

@@ -6,6 +6,7 @@ import UseAnimations from "react-useanimations";
 import github from "react-useanimations/lib/github";
 import instagram from "react-useanimations/lib/instagram";
 import facebook from "react-useanimations/lib/facebook";
+import { ContactSection } from "@/sections/Contact";
 
 const footerLinks = [
   {
@@ -49,7 +50,8 @@ export const Footer = () => {
 
   return (
     <footer className="relative overflow-x-clip z-10">
-      <div className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-inherit [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)] z-0"></div>
+      <ContactSection />
+      
 
       <div className="container z-10">
         <div className="border-t border-white/15 py-6 text-sm flex flex-col items-center gap-8 md:flex-row md:justify-between z-10">
@@ -58,7 +60,6 @@ export const Footer = () => {
               return (
                 <a
                   key={index}
-                  
                   href={link.href}
                   id={link.title}
                   className="inline-flex items-center gap-1.5 z-10 text-vercel-black"
