@@ -1,8 +1,8 @@
-import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons";
+import { FileTextIcon } from "@radix-ui/react-icons";
 import { BellIcon, Share2Icon, Rocket } from "lucide-react";
-import apodnasa from "@/assets/images/apodnasa.png";
+import githubprofile from "@/assets/images/gitgit2.png";
 import currencyconverter from "@/assets/images/currencyconverter3.png";
-import brainrot from "@/assets/images/brainrot.png";
+
 import nasa1 from "@/assets/images/nasa1.jpg";
 import nasa2 from "@/assets/images/nasa2.jpg";
 import nasa3 from "@/assets/images/nasa3.jpg";
@@ -18,32 +18,30 @@ const files = [
   {
     image: nasa1,
     name: "Near to the Heart Nebula",
-    body: ".",
-    href: "https://coconhat.github.io/NASA-APOD-News/",
+
+
   },
   {
     image: nasa2,
     name: "Spreadsheet",
-    body: ".",
-    href: "https://coconhat.github.io/NASA-APOD-News/",
+
+
   },
   {
     image: nasa3,
     name: "Aurora around Saturn's North Pole",
-    body: ".",
-    href: "https://coconhat.github.io/NASA-APOD-News/",
+
+
   },
   {
     image: nasa4,
     name: "The Shells and Jets of Galaxy Centaurus A",
-    body: ".",
-    href: "https://coconhat.github.io/NASA-APOD-News/",
+
+
   },
   {
     image: nasa5,
     name: "The Moon",
-    body: ".",
-    href: "https://coconhat.github.io/NASA-APOD-News/",
   },
 ];
 
@@ -54,7 +52,7 @@ const features = [
     description:
       "Provides daily updates on NASA's Astronomy Picture of the Day (APOD).",
     href: "https://coconhat.github.io/NASA-APOD-News/",
-    cta: "Learn more",
+    cta: "View site",
     className: "col-span-3 lg:col-span-1",
     background: (
       <Marquee
@@ -62,7 +60,7 @@ const features = [
         className="absolute top-10 [--duration:20s] [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)]"
       >
         {files.map((f, idx) => (
-          <a href={f.href} key={idx} target="_blank" rel="noopener noreferrer">
+          <>
             <figure
               className={cn(
                 "relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4",
@@ -82,10 +80,9 @@ const features = [
                 <figcaption className="text-sm font-medium dark:text-white">
                   {f.name}
                 </figcaption>
-                <blockquote className="mt-2 text-xs">{f.body}</blockquote>
               </div>
             </figure>
-          </a>
+          </>
         ))}
       </Marquee>
     ),
@@ -95,7 +92,7 @@ const features = [
     name: "Brainrot converter",
     description: "Convert normal text into brainrot.",
     href: "https://coconhat.github.io/brainrot-converter/",
-    cta: "Learn more",
+    cta: "View site",
     className: "col-span-3 lg:col-span-2",
     background: (
       <AnimatedListDemo className="absolute right-2 top-4 h-[300px] w-full border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105 text-vercel-black" />
@@ -106,7 +103,7 @@ const features = [
     name: "Currency Converter",
     description: "Supports 15+ currency and counting.",
     href: "https://coconhat.github.io/Currency-converter/",
-    cta: "Learn more",
+    cta: "View site",
     className: "col-span-3 lg:col-span-2",
     background: (
       <Image
@@ -118,7 +115,23 @@ const features = [
       />
     ),
   },
-  
+  {
+    Icon: FileTextIcon,
+    name: "More about my projects",
+    description: "click below to view my github.",
+    className: "col-span-3 lg:col-span-1",
+    href: "https://github.com/Coconhat?tab=repositories",
+    cta: "Learn more",
+    background: (
+      <Image
+        src={githubprofile}
+        alt="Integrations"
+        width={500}
+        height={300}
+        className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
+      />
+    ),
+  },
 ];
 
 export function BentoDemo() {

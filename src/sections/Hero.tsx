@@ -64,12 +64,12 @@ export const HeroSection = () => {
 
             <p className="mt-2 text-gray-400 md:text-lg">
               Hi! I&rsquo;m{" "}
-              <a
-                href="https://github.com/Coconhat"
-                className="relative inline-block text-white/80 hover:text-white before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-transparent hover:before:bg-gray-800 before:z-[-1] animate-soft-bounce hover:animate-none"
+              <span
+              
+                className="relative inline-block text-white/30 hover:text-white before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-transparent hover:before:bg-gray-800 before:z-[-1] animate-soft-bounce hover:animate-none"
               >
                 Nhat Vu
-              </a>
+              </span>
               . I&rsquo;m a 2nd year De La Salle Lipa student who loves building
               tools to solve real-world problems. I enjoy taking on challenges
               that push me to learn new skills while creating solutions that

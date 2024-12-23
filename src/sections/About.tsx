@@ -4,10 +4,10 @@ import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 import myPicture from "@/assets/images/nhatvucrop.jpg";
 import Image from "next/image";
-import JavascriptIcon from "@/assets/icons/square-js.svg";
-import HTMLIcon from "@/assets/icons/html5.svg";
-import CssIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
+import JavascriptIcon from "@/assets/icons/javascriptIcon.svg";
+import HTMLIcon from "@/assets/icons/htmlIcon.svg";
+import CssIcon from "@/assets/icons/cssIcon.svg";
+import ReactIcon from "@/assets/icons/reactIcon.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import CPlusPlusIcon from "@/assets/icons/cpluspluslogo.svg";
 import NextJsIcon from "@/assets/icons/nextjs-2.svg";
@@ -20,8 +20,9 @@ import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import { PersonStanding } from "lucide-react";
-import ShimmerButton from "@/components/ui/Shimmer-button";
+import pythonIcon from "@/assets/icons/pythonLogo.svg";
+import vercelIcon from "@/assets/icons/vercelIcon.svg";
+import javaIcon from "@/assets/icons/javaIcon.svg";
 
 const hobbies = [
   {
@@ -104,6 +105,18 @@ const toolboxItems = [
   {
     title: "Tailwind",
     iconType: TailWindIcon,
+  },
+  {
+    title: "Python",
+    iconType: pythonIcon,
+  },
+  {
+    title: "Vercel",
+    iconType: vercelIcon,
+  },
+  {
+    title: "Java",
+    iconType: javaIcon,
   },
 ];
 
@@ -239,7 +252,7 @@ export const AboutSection = () => {
                 </p>
               </div>
 
-              {/* Content */}
+              
               <div className="space-y-4 text-gray-700 dark:text-gray-200 z-[9999]">
                 <p className="leading-relaxed text-justify ">
                   My love for computers and problem solving began at a young age
