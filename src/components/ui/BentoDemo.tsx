@@ -2,6 +2,8 @@ import { FileTextIcon } from "@radix-ui/react-icons";
 import { BellIcon, Share2Icon, Rocket } from "lucide-react";
 import githubprofile from "@/assets/images/gitgit2.png";
 import currencyconverter from "@/assets/images/currencyconverter3.png";
+import mediatrix from "@/assets/images/mediatrix.png";
+import amazon from "@/assets/images/amazon.png";
 
 import nasa1 from "@/assets/images/nasa1.jpg";
 import nasa2 from "@/assets/images/nasa2.jpg";
@@ -18,26 +20,18 @@ const files = [
   {
     image: nasa1,
     name: "Near to the Heart Nebula",
-
-
   },
   {
     image: nasa2,
     name: "Spreadsheet",
-
-
   },
   {
     image: nasa3,
     name: "Aurora around Saturn's North Pole",
-
-
   },
   {
     image: nasa4,
     name: "The Shells and Jets of Galaxy Centaurus A",
-
-
   },
   {
     image: nasa5,
@@ -115,6 +109,43 @@ const features = [
       />
     ),
   },
+  {
+    Icon: FileTextIcon,
+    name: "Ancillary Communication and Updates Platform",
+    description:
+      "A finance and communication system for mediatrix ancillary department",
+    className: "col-span-3 lg:col-span-1",
+    href: "#",
+    cta: "private",
+    background: (
+      <Image
+        src={mediatrix}
+        alt="Integrations"
+        width={500}
+        height={300}
+        className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
+      />
+    ),
+  },
+  {
+    Icon: Share2Icon,
+    name: "Amazon Clone",
+    description:
+      "A functional e-commerce platform mimicking Amazon's features.",
+    href: "https://github.com/Coconhat/Amazon-Clone-js",
+    cta: "View Code",
+    className: "col-span-3 lg:col-span-2",
+    background: (
+      <Image
+        src={amazon}
+        alt="Integrations"
+        width={500}
+        height={300}
+        className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
+      />
+    ),
+  },
+
   {
     Icon: FileTextIcon,
     name: "More about my projects",
