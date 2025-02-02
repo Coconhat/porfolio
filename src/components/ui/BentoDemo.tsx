@@ -4,6 +4,7 @@ import githubprofile from "@/assets/images/gitgit2.png";
 import currencyconverter from "@/assets/images/currencyconverter3.png";
 import mediatrix from "@/assets/images/mediatrix.png";
 import amazon from "@/assets/images/amazon.png";
+import animo from "@/assets/images/animo.png";
 
 import nasa1 from "@/assets/images/nasa1.jpg";
 import nasa2 from "@/assets/images/nasa2.jpg";
@@ -94,11 +95,46 @@ const features = [
   },
   {
     Icon: Share2Icon,
+    name: "Animo Chat",
+    description: "Anonymously chat with other DLSL students.",
+    href: "https://animochat.com",
+    cta: "View site",
+    className: "col-span-3 lg:col-span-2",
+    background: (
+      <Image
+        src={animo}
+        alt="Integrations"
+        width={500}
+        height={300}
+        className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
+      />
+    ),
+  },
+  {
+    Icon: FileTextIcon,
+    name: "Amazon Clone",
+    description:
+      "A functional e-commerce platform mimicking Amazon's features.",
+    className: "col-span-3 lg:col-span-1",
+    href: "https://github.com/Coconhat/Amazon-Clone-js",
+    cta: "View code",
+    background: (
+      <Image
+        src={amazon}
+        alt="Integrations"
+        width={500}
+        height={300}
+        className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
+      />
+    ),
+  },
+  {
+    Icon: Share2Icon,
     name: "Currency Converter",
     description: "Supports 15+ currency and counting.",
     href: "https://coconhat.github.io/Currency-converter/",
     cta: "View site",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-3 lg:col-span-1",
     background: (
       <Image
         src={currencyconverter}
@@ -114,30 +150,12 @@ const features = [
     name: "Ancillary Communication and Updates Platform",
     description:
       "A finance and communication system for mediatrix ancillary department",
-    className: "col-span-3 lg:col-span-1",
     href: "#",
-    cta: "private",
-    background: (
-      <Image
-        src={mediatrix}
-        alt="Integrations"
-        width={500}
-        height={300}
-        className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
-      />
-    ),
-  },
-  {
-    Icon: Share2Icon,
-    name: "Amazon Clone",
-    description:
-      "A functional e-commerce platform mimicking Amazon's features.",
-    href: "https://github.com/Coconhat/Amazon-Clone-js",
-    cta: "View Code",
+    cta: "Private",
     className: "col-span-3 lg:col-span-2",
     background: (
       <Image
-        src={amazon}
+        src={mediatrix}
         alt="Integrations"
         width={500}
         height={300}
@@ -150,8 +168,8 @@ const features = [
     Icon: FileTextIcon,
     name: "More about my projects",
     description: "click below to view my github.",
-    className: "col-span-3 lg:col-span-1",
-    href: "https://github.com/Coconhat?tab=repositories",
+    className: "col-span-3 lg:col-span-2",
+    href: "https://github.com/Coconhat",
     cta: "Learn more",
     background: (
       <Image
