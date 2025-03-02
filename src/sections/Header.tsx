@@ -16,10 +16,12 @@ export const Header = () => {
           <span className="nav-item">About</span>
         </Link>
 
+        <Link href="/blog">
+          <span className="nav-item text-vercel-black">Blog</span>
+        </Link>
+
         <Link href="#contact">
-          <span className="nav-item bg-white text-vercel-black ">
-            Contact
-          </span>
+          <span className="nav-item bg-white text-vercel-black ">Contact</span>
         </Link>
       </nav>
     </div>
