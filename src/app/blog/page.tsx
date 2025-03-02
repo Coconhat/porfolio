@@ -29,9 +29,9 @@ const post = {
   },
   content: `
       
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Our previous matchmaking system was like throwing strangers into a room blindfolded and hoping they'd hit it off. It worked! Mostly. But there was one tiny problem: the dreaded re-match. You know that moment when you've just finished an awkward conversation with someone, hit "next," and—surprise!—there they are again? It's the digital equivalent of running into your ex at the grocery store right after your breakup. Not fun.</p>
+        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Our previous matchmaking system was like throwing strangers into a room blindfolded and hoping they'd hit it off. It worked, mostly. But there was one tiny problem: the dreaded re-match. You know that moment when you've just finished an awkward conversation with someone, hit "next," and there they are again? It's like running into your ex at the grocery store right after your breakup. Not fun.</p>
 
-         <p class="text-lg text-vercel-black  mt-5  mb-3"> for more information about the previous match making please read tyron's blog <a href="https://blog.tyronscott.me/blog/animochat"><span class="text-blue-600">here</span></a></p>
+         <p class="text-lg text-vercel-black  mt-5  mb-3">For more information about the previous matchmaking, please read Tyron's blog <a href="https://blog.tyronscott.me/blog/animochat"><span class="text-blue-600">here</span></a></p>
 
        
         
@@ -39,12 +39,12 @@ const post = {
 
         
 
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">So, we've revamped our matchmaking logic. Instead of one waiting room where everyone mingles like awkward teenagers at a school dance, we now have THREE waiting rooms:</p>
+        <p class="text-lg leading-relaxed mb-6 text-vercel-black">So, we've revamped our matchmaking logic. Instead of one waiting room where everyone might get rematch with the same person, we now have THREE waiting rooms:</p>
         
 
 
         
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">This means if you and your chat partner decide to part ways, you'll each be shuffled into separate waiting rooms—dramatically reducing the chance of an awkward digital reunion. It's like having bouncers escort you out different exits after a failed blind date.</p>
+        <p class="text-lg leading-relaxed mb-6 text-vercel-black">This means if you and your chat partner decide to part ways, you'll each be shuffled into separate waiting rooms—dramatically reducing the chance of an awkward reunion. It's like having bouncers escort you out different exits after a failed blind date :D</p>
         
       
         
@@ -82,23 +82,21 @@ $$ LANGUAGE plpgsql;</code></pre>
         
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">If this made absolutely no sense to you, here's the ELI5 version:</p>
         
-        <ol class="list-decimal pl-6 mb-8 space-y-2 text-vercel-black">
-          <li class="text-lg">We check if you're already chatting with someone (no double-dating here)</li>
-          <li class="text-lg">if you are in the waiting room, match with the same person in that waiting room.
-              <li class="text-lg">If you just ghosted someone, you go to another room while the person you ghosted goes to a different room</li>
-             
-         
-          </li>
-          <li class="text-lg">We clean up by removing room that are ended</li>
-          <li class="text-lg">We find you a match from your waiting room (that dont contain your ex-chat) </li>
-          <li class="text-lg">If we find a match, we introduce you two and kick you both out of the waiting rooms :D</li>
-          <li class="text-lg">If not, you keep waiting (maybe practice your opening lines?)</li>
-        </ol>
+      <ol class="list-decimal pl-6 mb-8 space-y-2 text-vercel-black">
+  <li class="text-lg">We check if you're already chatting with someone (no double-dating here!).</li>
+  <li class="text-lg">If you're in the waiting room, we match you with someone else from that same waiting room.</li>
+  <li class="text-lg">If you just ghosted someone, you get placed in a different room, while the person you ghosted is placed in another.</li>
+  <li class="text-lg">We clean up by removing rooms that are no longer active.</li>
+  <li class="text-lg">We find you a match from your waiting room (not with ur ex-chat partner).</li>
+  <li class="text-lg">If we find a match, we introduce you to each other and remove both of you from the waiting rooms. 🎉</li>
+  <li class="text-lg">If no match is found, please wait for your partner :D (maybe practice your opening lines?).</li>
+</ol>
+
         
         <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">so what does this mean for you?</h2>
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">For the average AnimoChat user, this means less digital déjà vu and more fresh conversations. You can now hit "next" with confidence, knowing that your paths are unlikely to cross again with that person who thought your joke about String theory was "actually quantum physics" (ugh).</p>
         
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Think of it as our gift to the socially awkward (which, let's be honest, is most of the internet). We've created a system where you can bail on a conversation and not have to worry about explaining yourself if you match again 30 seconds later. lol</p>
+        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Think of it as our gift to the socially awkward (which, let's be honest, is most of the internet). We've created a system where you can bail on a conversation without worrying about explaining yourself if you match again 30 seconds later. lol</p>
         
         <blockquote class="border-l-4 border-blue-500 pl-4 italic my-8">
           <p class="text-xl text-gray-600">In a world where digital connections are random, the least we can do is make sure they're not repetitively random.</p>
