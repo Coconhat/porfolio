@@ -89,7 +89,7 @@ $$ LANGUAGE plpgsql;</code></pre>
   <li class="text-lg">We clean up by removing rooms that are no longer active.</li>
   <li class="text-lg">We find you a match from your waiting room (not with ur ex-chat partner).</li>
   <li class="text-lg">If we find a match, we introduce you to each other and remove both of you from the waiting rooms. 🎉</li>
-  <li class="text-lg">If no match is found, please wait for your partner :D (maybe practice your opening lines?).</li>
+  <li class="text-lg">If no match is found, please wait for your partner :D (maybe take this time to practice your opening lines?).</li>
 </ol>
 
         
