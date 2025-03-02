@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+
 import {
   CalendarIcon,
   Clock3Icon,
@@ -120,7 +121,16 @@ $$ LANGUAGE plpgsql;</code></pre>
   return posts[slug as keyof typeof posts] || null;
 };
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+interface BlogPostProps {
+  params: { slug: string };
+}
+
+export async function generateStaticParams() {
+  return [{ slug: "animochat-matchmaking-v3" }];
+}
+
+export default function BlogPost({ params }: BlogPostProps) {
+  const { slug } = params;
   const post = getBlogPost(params.slug);
 
   if (!post) {
