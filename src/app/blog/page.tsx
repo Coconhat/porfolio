@@ -23,13 +23,13 @@ const post = {
   readTime: "6 min read",
   category: "AnimoChat",
   author: {
-    name: "Nhat Vu Le",
-    avatar: "/tyron-avatar.svg",
+    name: "Nhat Vu",
+    avatar: "/ememememe",
     title: "(eme)",
   },
   content: `
       
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Our previous matchmaking system was like throwing strangers into a room blindfolded and hoping they'd hit it off. It worked, mostly. But there was one tiny problem: the dreaded re-match. You know that moment when you've just finished an awkward conversation with someone, hit "next," and there they are again? It's like running into your ex at the grocery store right after your breakup. Not fun.</p>
+        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Our previous matchmaking system was like throwing strangers into a room blindfolded and hoping they'd hit it off. It worked, mostly. But there was one tiny problem: the dreaded re-match. You know that moment when you've just finished an awkward conversation with someone, hit "next," and there they are again? It's like leaving an awkward coffee shop chat, only to find you parked next to each other. Not fun.</p>
 
          <p class="text-lg text-vercel-black  mt-5  mb-3">For more information about the previous matchmaking, please read Tyron's blog <a href="https://blog.tyronscott.me/blog/animochat"><span class="text-blue-600">here</span></a></p>
 
@@ -44,7 +44,7 @@ const post = {
 
 
         
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">This means if you and your chat partner decide to part ways, you'll each be shuffled into separate waiting rooms—dramatically reducing the chance of an awkward reunion. It's like having bouncers escort you out different exits after a failed blind date :D</p>
+        <p class="text-lg leading-relaxed mb-6 text-vercel-black">This means if you and your chat partner decide to part ways, you'll each be shuffled into separate waiting rooms—dramatically reducing the chance of an awkward reunion. It's like having bouncers escort you out different exits after an awkward meetup :D</p>
         
       
         
@@ -80,7 +80,7 @@ END;
 $$ LANGUAGE plpgsql;</code></pre>
 
         
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">If this made absolutely no sense to you, here's the ELI5 version:</p>
+        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Here’s a quick, no-code explanation of how it works:</p>
         
       <ol class="list-decimal pl-6 mb-8 space-y-2 text-vercel-black">
   <li class="text-lg">We check if you're already chatting with someone (no double-dating here!).</li>
@@ -94,7 +94,7 @@ $$ LANGUAGE plpgsql;</code></pre>
 
         
         <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">so what does this mean for you?</h2>
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">For the average AnimoChat user, this means less digital déjà vu and more fresh conversations. You can now hit "next" with confidence, knowing that your paths are unlikely to cross again with that person who thought your joke about String theory was "actually quantum physics" (ugh).</p>
+        <p class="text-lg leading-relaxed mb-6 text-vercel-black">For AnimoChat user, this means less digital déjà vu and more fresh conversations. You can now hit "next" with confidence, knowing that your paths are unlikely to cross again with that person who thought your joke about String theory was "actually quantum physics" (ugh).</p>
 
     <p class="text-lg leading-relaxed mb-6 text-vercel-black">
   Social interactions can sometimes feel a bit overwhelming. That's why we've built a system that lets you smoothly transition to a new conversation without the awkwardness of running into the same person again. It's all about keeping things fresh and comfortable for you!
@@ -109,7 +109,7 @@ $$ LANGUAGE plpgsql;</code></pre>
         
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">So next time you find yourself in a delightfully random conversation on AnimoChat, remember: there's a complex system of digital bouncers working tirelessly to ensure your next match will be someone completely new to judge your memes and typos.</p>
         
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Happy chatting! And remember, if the matchmaking ever feels slow, it's not the system—it's just that everyone else found their digital soulmate before you. (Just kidding... mostly.)</p>
+        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Happy chatting! And remember, if the matchmaking ever feels slow, it's not the system—it's just that everyone else found their digital soulmate before you. (Just kidding :D)</p>
         
     <p class="text-lg leading-relaxed mt-8 italic text-gray-600">P.S. To our competitors still using single-waiting-room systems: We love a good throwback! Hope your customers enjoy the retro experience—maybe throw in some dial-up sounds for the full effect? But hey, if you ever decide to join us in 2025, we’ll save you a seat (no waiting room required). 😉</p>
       `,
