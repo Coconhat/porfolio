@@ -95,8 +95,10 @@ $$ LANGUAGE plpgsql;</code></pre>
         
         <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">so what does this mean for you?</h2>
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">For the average AnimoChat user, this means less digital déjà vu and more fresh conversations. You can now hit "next" with confidence, knowing that your paths are unlikely to cross again with that person who thought your joke about String theory was "actually quantum physics" (ugh).</p>
-        
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Think of it as our gift to the socially awkward (which, let's be honest, is most of the internet). We've created a system where you can bail on a conversation without worrying about explaining yourself if you match again 30 seconds later. lol</p>
+
+    <p class="text-lg leading-relaxed mb-6 text-vercel-black">
+  Social interactions can sometimes feel a bit overwhelming. That's why we've built a system that lets you smoothly transition to a new conversation without the awkwardness of running into the same person again. It's all about keeping things fresh and comfortable for you!
+</p>
         
         <blockquote class="border-l-4 border-blue-500 pl-4 italic my-8">
           <p class="text-xl text-gray-600">In a world where digital connections are random, the least we can do is make sure they're not repetitively random.</p>
