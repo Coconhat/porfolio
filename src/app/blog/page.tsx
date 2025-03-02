@@ -60,7 +60,7 @@ export default function BlogHome() {
     <div className="container mx-auto px-4 py-12">
       <header className="mb-16 text-center">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4 text-vercel-black">
-          Nhat Vu's blog
+          Nhat Vu&apos; blog
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           Welcome to my blog eme
