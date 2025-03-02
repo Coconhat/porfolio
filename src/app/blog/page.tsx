@@ -15,20 +15,19 @@ import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 
-const posts = {
-  "animochat-matchmaking-v3": {
-    title: "AnimoChat's Matchmaking v3: Third Time's a Charm",
-    excerpt:
-      "We've completely rebuilt our matchmaking system with 3 waiting rooms to save you from awkward re-matches!",
-    date: "March 2, 2025",
-    readTime: "6 min read",
-    category: "AnimoChat",
-    author: {
-      name: "Nhat Vu Le",
-      avatar: "/tyron-avatar.svg",
-      title: "(eme)",
-    },
-    content: `
+const post = {
+  title: "AnimoChat's Matchmaking v3: Third Time's a Charm",
+  excerpt:
+    "We've completely rebuilt our matchmaking system with 3 waiting rooms to save you from awkward re-matches!",
+  date: "March 2, 2025",
+  readTime: "6 min read",
+  category: "AnimoChat",
+  author: {
+    name: "Nhat Vu Le",
+    avatar: "/tyron-avatar.svg",
+    title: "(eme)",
+  },
+  content: `
       
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">Our previous matchmaking system was like throwing strangers into a room blindfolded and hoping they'd hit it off. It worked! Mostly. But there was one tiny problem: the dreaded re-match. You know that moment when you've just finished an awkward conversation with someone, hit "next," and—surprise!—there they are again? It's the digital equivalent of running into your ex at the grocery store right after your breakup. Not fun.</p>
 
@@ -114,20 +113,11 @@ $$ LANGUAGE plpgsql;</code></pre>
         
     <p class="text-lg leading-relaxed mt-8 italic text-gray-600">P.S. To our competitors still using single-waiting-room systems: We love a good throwback! Hope your customers enjoy the retro experience—maybe throw in some dial-up sounds for the full effect? But hey, if you ever decide to join us in 2025, we’ll save you a seat (no waiting room required). 😉</p>
       `,
-  },
 };
-
-// interface BlogPostProps {
-//   params: { slug: string };
-// }
-
-// export async function generateStaticParams() {
-//   return [{ slug: "animochat-matchmaking-v3" }];
-// }
 
 export default function BlogPost() {
   //   const { slug } = params;
-  const post = posts["animochat-matchmaking-v3"];
+  // const post = posts["animochat-matchmaking-v3"];
 
   //   if (!post) {
   //     notFound();
