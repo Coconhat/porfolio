@@ -111,7 +111,7 @@ $$ LANGUAGE plpgsql;</code></pre>
         
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">Happy chatting! And remember, if the matchmaking ever feels slow, it's not the system—it's just that everyone else found their digital soulmate before you. (Just kidding :D)</p>
         
-    <p class="text-lg leading-relaxed mt-8 italic text-gray-600">P.S. There's still a low chance that you might match with the same chat partner again. 😉</p>
+    <p class="text-lg leading-relaxed mt-8 italic text-gray-600">P.S. There's still a slight that that  you might match with your ex chat partner again. 😉</p>
       `,
 };
 
@@ -161,7 +161,7 @@ export default function BlogPost() {
             <CalendarIcon className="h-4 w-4 mr-1 text-gray-500" />
             <span className="mr-4 text-sm">{post.date}</span>
             <Clock3Icon className="h-4 w-4 mr-1 text-gray-500" />
-            <span className="text-xs">{post.readTime}</span>
+            <span className="text-sx">{post.readTime}</span>
           </div>
         </div>
 
