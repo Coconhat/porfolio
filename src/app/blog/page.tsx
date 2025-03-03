@@ -151,7 +151,7 @@ export default function BlogPost() {
             <AvatarFallback>{post.author.name.slice(0, 2)}</AvatarFallback>
           </Avatar>
           <div>
-            <p className="font-medium text-vercel-black sm:text-sm">
+            <p className="font-medium text-vercel-black text-xs">
               {post.author.name}
             </p>
             <p className="text-sm text-gray-500">{post.author.title}</p>
@@ -161,7 +161,7 @@ export default function BlogPost() {
             <CalendarIcon className="h-4 w-4 mr-1 text-gray-500" />
             <span className="mr-4 text-sm">{post.date}</span>
             <Clock3Icon className="h-4 w-4 mr-1 text-gray-500" />
-            <span>{post.readTime}</span>
+            <span className="text-xs">{post.readTime}</span>
           </div>
         </div>
 
