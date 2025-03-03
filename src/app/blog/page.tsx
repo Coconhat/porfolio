@@ -31,7 +31,13 @@ const post = {
       
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">Our previous matchmaking system was like throwing strangers into a room blindfolded and hoping they'd hit it off. It worked, mostly. But there was one tiny problem: the dreaded re-match. You know that moment when you've just finished an awkward conversation with someone, hit "next," and there they are again? It's like leaving an awkward coffee shop chat, only to find you parked next to each other. Not fun.</p>
 
-         <p class="text-lg text-vercel-black  mt-5  mb-3">For more information about the previous matchmaking, please read Tyron's blog <a href="https://blog.tyronscott.me/blog/animochat"><span class="text-blue-600">here</span></a></p>
+<p class="text-lg text-vercel-black mt-5 mb-3">
+  For more information about the previous matchmaking, please read Tyron's blog 
+  <a href="https://blog.tyronscott.me/blog/animochat" target="_blank" rel="noopener noreferrer">
+    <span class="text-blue-600">here</span>
+  </a>
+</p>
+
 
        
         
@@ -49,32 +55,53 @@ const post = {
       
         
         <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">The technical magic (or, how to avoid digital awkwardness at scale)</h2>
-        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Behind the scenes, our matchmaking is still powered by the same Postgres functions—our digital cupids—but now they're working triple shifts. Here's a simplified look at how the magic happens:</p>
+        <p class="text-lg leading-relaxed mb-6 text-vercel-black">Behind the scenes, our matchmaking is still powered by the same Postgres functions but now they're working triple shifts. Here's a simplified look at how the magic happens:</p>
         
-     <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>CREATE OR REPLACE FUNCTION find_match(_user_id text)
+     <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>CREATE OR REPLACE FUNCTION find_match(user_id text)
 RETURNS TABLE (match_id UUID, user1 text, user2 text, status TEXT) AS $$
 BEGIN
   -- If already matched, return current match
-  IF already_matched THEN
-    RETURN QUERY SELECT match_info;
+  IF (SELECT EXISTS(SELECT 1 FROM matches WHERE (user1 = user_id OR user2 = user_id) AND status = 'active')) THEN
+    RETURN QUERY SELECT m.match_id, m.user1, m.user2, 'existing'::TEXT 
+                 FROM matches m 
+                 WHERE (m.user1 = user_id OR m.user2 = user_id) AND m.status = 'active';
+    RETURN;
   END IF;
 
-  -- If just left a match, move to a different waiting room
-  IF just_left THEN
-    INSERT INTO waiting_room (user_id, timestamp) ON CONFLICT DO NOTHING;
-  END IF;
+  -- Clear any existing waiting status
+  DELETE FROM waiting_room WHERE user_id = user_id;
+  
+  -- Remove inactive users
+  DELETE FROM waiting_room WHERE NOT is_online(user_id);
 
-  -- Remove inactive users from waiting room
-  DELETE FROM waiting_room WHERE inactive;
-
+  -- Assign to a random waiting room (1-3)
+  INSERT INTO waiting_room (user_id, room_number) 
+  VALUES (user_id, floor(random() * 3) + 1);
+  
   -- Try to find a match in the same waiting room
-  IF match_found THEN
-    DELETE FROM waiting_room WHERE matched;
-    INSERT INTO matches (user1, user2, status) VALUES (you, match, 'active');
-    RETURN QUERY SELECT match_details;
+  WITH potential_match AS (
+    SELECT wr.user_id AS matched_user
+    FROM waiting_room wr
+    WHERE wr.user_id != user_id 
+      AND wr.room_number = (SELECT room_number FROM waiting_room WHERE user_id = user_id)
+    ORDER BY RANDOM()
+    LIMIT 1
+    FOR UPDATE SKIP LOCKED
+  )
+  SELECT matched_user INTO matched_user FROM potential_match;
+  
+  IF matched_user IS NOT NULL THEN
+    -- Found a match!
+    DELETE FROM waiting_room WHERE user_id IN (user_id, matched_user);
+    
+    INSERT INTO matches (user1, user2, status) 
+    VALUES (user_id, matched_user, 'active') 
+    RETURNING match_id, user1, user2, status INTO match_id, user1, user2, status;
+    
+    RETURN QUERY SELECT match_id, user1, user2, 'matched'::TEXT;
   ELSE
     -- Stay in waiting room
-    RETURN QUERY SELECT waiting_status;
+    RETURN QUERY SELECT NULL::UUID, user_id, NULL::TEXT, 'waiting'::TEXT;
   END IF;
 END;
 $$ LANGUAGE plpgsql;</code></pre>
@@ -112,6 +139,8 @@ $$ LANGUAGE plpgsql;</code></pre>
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">Happy chatting! And remember, if the matchmaking ever feels slow, it's not the system—it's just that everyone else found their digital soulmate before you. (Just kidding :D)</p>
         
     <p class="text-lg leading-relaxed mt-8 italic text-gray-600">P.S. There's still a slight that that  you might match with your ex chat partner again. 😉</p>
+
+    
       `,
 };
 
