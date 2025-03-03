@@ -111,7 +111,7 @@ $$ LANGUAGE plpgsql;</code></pre>
         
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">Happy chatting! And remember, if the matchmaking ever feels slow, it's not the system—it's just that everyone else found their digital soulmate before you. (Just kidding :D)</p>
         
-    <p class="text-lg leading-relaxed mt-8 italic text-gray-600">P.S. To our competitors still using single-waiting-room systems: We love a good throwback! Hope your customers enjoy the retro experience—maybe throw in some dial-up sounds for the full effect? But hey, if you ever decide to join us in 2025, we’ll save you a seat (no waiting room required). 😉</p>
+    <p class="text-lg leading-relaxed mt-8 italic text-gray-600">P.S. There's still a low chance that you might match with the same chat partner again. 😉</p>
       `,
 };
 
