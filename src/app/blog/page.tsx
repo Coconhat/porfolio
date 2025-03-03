@@ -35,7 +35,7 @@ const post = {
 
        
         
-        <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">matchmaking v3: Third Time’s a Charm</h2>
+        <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">Matchmaking v3: Third Time’s a Charm</h2>
 
         
 
@@ -48,7 +48,7 @@ const post = {
         
       
         
-        <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">the technical magic (or, how to avoid digital awkwardness at scale)</h2>
+        <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">The technical magic (or, how to avoid digital awkwardness at scale)</h2>
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">Behind the scenes, our matchmaking is still powered by the same Postgres functions—our digital cupids—but now they're working triple shifts. Here's a simplified look at how the magic happens:</p>
         
      <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>CREATE OR REPLACE FUNCTION find_match(_user_id text)
@@ -93,7 +93,7 @@ $$ LANGUAGE plpgsql;</code></pre>
 </ol>
 
         
-        <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">so what does this mean for you?</h2>
+        <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">So what does this mean for you?</h2>
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">For AnimoChat user, this means less digital déjà vu and more fresh conversations. You can now hit "next" with confidence, knowing that your paths are unlikely to cross again with that person who thought your joke about String theory was "actually quantum physics" (ugh).</p>
 
     <p class="text-lg leading-relaxed mb-6 text-vercel-black">
@@ -104,7 +104,7 @@ $$ LANGUAGE plpgsql;</code></pre>
           <p class="text-xl text-gray-600">In a world where digital connections are random, the least we can do is make sure they're not repetitively random.</p>
         </blockquote>
         
-        <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">wrapping up</h2>
+        <h2 class="text-2xl font-bold mt-10 mb-4 text-vercel-black">Wrapping up</h2>
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">AnimoChat's three-room matchmaking isn't just a technical upgrade—it's an awkwardness avoidance system.</p>
         
         <p class="text-lg leading-relaxed mb-6 text-vercel-black">So next time you find yourself in a delightfully random conversation on AnimoChat, remember: there's a complex system of digital bouncers working tirelessly to ensure your next match will be someone completely new to judge your memes and typos.</p>
