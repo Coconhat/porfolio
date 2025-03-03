@@ -198,33 +198,6 @@ export default function BlogPost() {
           className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
-
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <Card className="bg-gray-50">
-            <CardContent className="pt-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <Avatar className="h-10 w-10 mr-4">
-                    <AvatarImage
-                      src={post.author.avatar}
-                      alt={post.author.name}
-                    />
-                    <AvatarFallback>
-                      {post.author.name.slice(0, 2)}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <p className="font-medium text-vercel-black">
-                      Written by {post.author.name}
-                    </p>
-                    <p className="text-sm text-gray-500">{post.author.title}</p>
-                  </div>
-                </div>
-                <div className="flex space-x-2"></div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </div>
   );
