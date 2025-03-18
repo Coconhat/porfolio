@@ -5,7 +5,7 @@ import currencyconverter from "@/assets/images/currencyconverter3.png";
 import mediatrix from "@/assets/images/mediatrix.png";
 import amazon from "@/assets/images/amazon.png";
 import animo from "@/assets/images/animo.png";
-
+import freedomwall from "@/assets/images/freedomwall.png";
 import nasa1 from "@/assets/images/nasa1.jpg";
 import nasa2 from "@/assets/images/nasa2.jpg";
 import nasa3 from "@/assets/images/nasa3.jpg";
@@ -166,9 +166,26 @@ const features = [
 
   {
     Icon: FileTextIcon,
+    name: "Animochat's Freedom Wall",
+    description: "A platform for DLSL students to share their thoughts.",
+    className: "col-span-3 lg:col-span-2",
+    href: "https://animochat.com/freedomwall",
+    cta: "View Site",
+    background: (
+      <Image
+        src={freedomwall}
+        alt="Integrations"
+        width={500}
+        height={300}
+        className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
+      />
+    ),
+  },
+  {
+    Icon: FileTextIcon,
     name: "More about my projects",
     description: "click below to view my github.",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-3 lg:col-span-1",
     href: "https://github.com/Coconhat",
     cta: "Learn more",
     background: (
