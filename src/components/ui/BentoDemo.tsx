@@ -128,23 +128,23 @@ const features = [
       />
     ),
   },
-  {
-    Icon: Share2Icon,
-    name: "Currency Converter",
-    description: "Supports 15+ currency and counting.",
-    href: "https://coconhat.github.io/Currency-converter/",
-    cta: "View site",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <Image
-        src={currencyconverter}
-        alt="Integrations"
-        width={500}
-        height={300}
-        className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
-      />
-    ),
-  },
+  // {
+  //   Icon: Share2Icon,
+  //   name: "Currency Converter",
+  //   description: "Supports 15+ currency and counting.",
+  //   href: "https://coconhat.github.io/Currency-converter/",
+  //   cta: "View site",
+  //   className: "col-span-3 lg:col-span-1",
+  //   background: (
+  //     <Image
+  //       src={currencyconverter}
+  //       alt="Integrations"
+  //       width={500}
+  //       height={300}
+  //       className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
+  //     />
+  //   ),
+  // },
   {
     Icon: FileTextIcon,
     name: "Ancillary Communication and Updates Platform",
@@ -164,23 +164,23 @@ const features = [
     ),
   },
 
-  {
-    Icon: FileTextIcon,
-    name: "Animochat's Freedom Wall",
-    description: "A platform for DLSL students to share their thoughts.",
-    className: "col-span-3 lg:col-span-2",
-    href: "https://animochat.com/freedomwall",
-    cta: "View Site",
-    background: (
-      <Image
-        src={freedomwall}
-        alt="Integrations"
-        width={500}
-        height={300}
-        className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
-      />
-    ),
-  },
+  // {
+  //   Icon: FileTextIcon,
+  //   name: "Animochat's Freedom Wall",
+  //   description: "A platform for DLSL students to share their thoughts.",
+  //   className: "col-span-3 lg:col-span-2",
+  //   href: "https://animochat.com/freedomwall",
+  //   cta: "View Site",
+  //   background: (
+  //     <Image
+  //       src={freedomwall}
+  //       alt="Integrations"
+  //       width={500}
+  //       height={300}
+  //       className="absolute right-0 top-0 origin-top rounded-md border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
+  //     />
+  //   ),
+  // },
   {
     Icon: FileTextIcon,
     name: "More about my projects",
