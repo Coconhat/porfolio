@@ -1,4 +1,4 @@
-import { Header } from "@/sections/Header";
+import { NavbarDemo } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
 import { TapeSection } from "@/sections/Tape";
 import { AboutSection } from "@/sections/About";
@@ -9,7 +9,7 @@ import { BentoDemo } from "@/components/ui/BentoDemo";
 export default function Home() {
   return (
     <div className="w-full h-128 mx-auto my-4 p-4 bg-background">
-      <Header />
+      <NavbarDemo />
       <section id="hero">
         <HeroSection />
       </section>

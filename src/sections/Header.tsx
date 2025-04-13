@@ -1,29 +1,102 @@
-import Link from "next/link";
+"use client";
+import {
+  Navbar,
+  NavBody,
+  NavItems,
+  MobileNav,
+  NavbarLogo,
+  NavbarButton,
+  MobileNavHeader,
+  MobileNavToggle,
+  MobileNavMenu,
+} from "@/components/ui/resizable-navbar";
+import { useState } from "react";
 
-export const Header = () => {
+export function NavbarDemo() {
+  const navItems = [
+    {
+      name: "Projects",
+      link: "#projects",
+    },
+    {
+      name: "About",
+      link: "#about",
+    },
+    {
+      name: "Blog",
+      link: "/blog",
+    },
+  ];
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <div className="flex justify-center items-center fixed top-0 left-0 right-0 z-10 h-16 bg-vercel-white/90 backdrop-blur">
-      <nav className="flex gap-4 p-2 border border-white/15 rounded-full bg-white/10 backdrop-blur">
-        <Link href="#hero">
-          <span className="nav-item">Home</span>
-        </Link>
+    <div className="relative w-full">
+      <Navbar>
+        {/* Desktop Navigation */}
+        <NavBody visible={true}>
+          <NavbarLogo />
+          <NavItems items={navItems} />
+          <div className="flex items-center gap-4">
+            <NavbarButton
+              variant="primary"
+              onClick={() => {
+                const contactSection = document.querySelector("#contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              Contact
+            </NavbarButton>
+          </div>
+        </NavBody>
 
-        <Link href="#projects">
-          <span className="nav-item">Projects</span>
-        </Link>
+        {/* Mobile Navigation */}
+        <MobileNav>
+          <MobileNavHeader>
+            <NavbarLogo />
+            <MobileNavToggle
+              isOpen={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
+          </MobileNavHeader>
 
-        <Link href="#about">
-          <span className="nav-item">About</span>
-        </Link>
+          <MobileNavMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+          >
+            {navItems.map((item, idx) => (
+              <a
+                key={`mobile-link-${idx}`}
+                href={item.link}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="relative text-neutral-600 dark:text-neutral-300"
+              >
+                <span className="block">{item.name}</span>
+              </a>
+            ))}
+            <div className="flex w-full flex-col gap-4">
+              <NavbarButton
+                onClick={() => setIsMobileMenuOpen(false)}
+                variant="primary"
+                className="w-full"
+              >
+                Login
+              </NavbarButton>
+              <NavbarButton
+                onClick={() => setIsMobileMenuOpen(false)}
+                variant="primary"
+                className="w-full"
+              >
+                Book a call
+              </NavbarButton>
+            </div>
+          </MobileNavMenu>
+        </MobileNav>
+      </Navbar>
 
-        <Link href="/blog">
-          <span className="nav-item text-vercel-black">Blog</span>
-        </Link>
-
-        <Link href="#contact">
-          <span className="nav-item bg-white text-vercel-black ">Contact</span>
-        </Link>
-      </nav>
+      {/* Navbar */}
     </div>
   );
-};
+}

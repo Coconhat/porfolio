@@ -16,6 +16,7 @@ import { AnimatedListDemo } from "@/components/ui/AnimatedListDemo";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import Marquee from "@/components/ui/marquee";
 import Image from "next/image";
+import { LineShadowText } from "../magicui/line-shadow-text";
 
 const files = [
   {
@@ -204,8 +205,11 @@ export function BentoDemo() {
   return (
     <>
       <div>
-        <h2 className="text-3xl font-semibold text-vercel-black">
-          Featured Project
+        <h2 className="text-balance text-5xl font-semibold leading-none tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-vercel-black text-center">
+          Notable{" "}
+          <LineShadowText className="italic" shadowColor="black">
+            Projects
+          </LineShadowText>
         </h2>
         <p className="text-lg text-vercel-white/60 mt-4 max-w-md">
           Each project represents a unique vision transformed into an engaging
