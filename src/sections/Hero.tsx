@@ -2,11 +2,11 @@
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
-import React from 'react';
+import React from "react";
 import { ParticlesDemo } from "@/components/ui/Particle";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import SparklesText from "@/components/ui/sparkles-text";
-
+import { MaskContainer } from "@/components/ui/svg-mask-effect";
 
 export const HeroSection = () => {
   return (
@@ -27,7 +27,7 @@ export const HeroSection = () => {
           </div>
           <div className="max-w-lg text-left">
             <h1 className="text-3xl md:text-5xl mt-6 tracking-wide font-bold">
-              {<SparklesText text="Buiding Great"/>}
+              {<SparklesText text="Buiding Great" />}
               <div
                 style={{
                   minHeight: "1.5em",
@@ -62,18 +62,23 @@ export const HeroSection = () => {
               </div>
             </h1>
 
-            <p className="mt-2 text-gray-400 md:text-lg">
-              Hi! I&rsquo;m{" "}
-              <span
-              
-                className="relative inline-block text-white/30 hover:text-white before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-transparent hover:before:bg-gray-800 before:z-[-1] animate-soft-bounce hover:animate-none"
+            <p className="mt-2 text-gray-400 md:text-lg ">
+              <MaskContainer
+                revealText={
+                  <p className="mt-2 text-gray-400 md:text-lg">
+                    Hi! I&rsquo;m Nhat Vu I&rsquo;m a 2nd year De La Salle Lipa
+                    student who loves building tools to solve real-world
+                    problems. I enjoy taking on challenges that push me to learn
+                    new skills while creating solutions that matter.
+                  </p>
+                }
+                className=" text-white dark:text-black"
               >
-                Nhat Vu
-              </span>
-              . I&rsquo;m a 2nd year De La Salle Lipa student who loves building
-              tools to solve real-world problems. I enjoy taking on challenges
-              that push me to learn new skills while creating solutions that
-              matter.
+                As a developer I thrive on turning{" "}
+                <span className="text-blue-500"> ideas into impact.</span>{" "}
+                Whether it&apos;s coding tools or challenges
+                <span className="text-blue-500"></span>.
+              </MaskContainer>
             </p>
           </div>
 
