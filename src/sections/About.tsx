@@ -5,8 +5,6 @@ import { SectionHeader } from "@/components/SectionHeader";
 import myPicture from "@/assets/images/nhatvucrop.jpg";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/javascriptIcon.svg";
-import HTMLIcon from "@/assets/icons/htmlIcon.svg";
-import CssIcon from "@/assets/icons/cssIcon.svg";
 import ReactIcon from "@/assets/icons/reactIcon.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import CPlusPlusIcon from "@/assets/icons/cpluspluslogo.svg";
@@ -23,6 +21,11 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 import pythonIcon from "@/assets/icons/pythonLogo.svg";
 import vercelIcon from "@/assets/icons/vercelIcon.svg";
 import javaIcon from "@/assets/icons/javaIcon.svg";
+import supabaseIcon from "@/assets/icons/supabase.svg";
+import dockerIcon from "@/assets/icons/docker.svg";
+import firebaseIcon from "@/assets/icons/firebase.svg";
+import cloudflareIcon from "@/assets/icons/cloudflare.svg";
+import expressjsIcon from "@/assets/icons/expressjs.svg";
 
 const hobbies = [
   {
@@ -74,14 +77,7 @@ const toolboxItems = [
     title: "Javascript",
     iconType: JavascriptIcon,
   },
-  {
-    title: "HTML",
-    iconType: HTMLIcon,
-  },
-  {
-    title: "CSS",
-    iconType: CssIcon,
-  },
+
   {
     title: "React",
     iconType: ReactIcon,
@@ -117,6 +113,30 @@ const toolboxItems = [
   {
     title: "Java",
     iconType: javaIcon,
+  },
+  {
+    title: "Supabase",
+    iconType: supabaseIcon,
+  },
+  {
+    title: "Firebase",
+    iconType: firebaseIcon,
+  },
+  {
+    title: "Docker",
+    iconType: dockerIcon,
+  },
+  {
+    title: "Cloudflare",
+    iconType: cloudflareIcon,
+  },
+  {
+    title: "Cloudflare",
+    iconType: cloudflareIcon,
+  },
+  {
+    title: "ExpressJS",
+    iconType: expressjsIcon,
   },
 ];
 
@@ -252,7 +272,6 @@ export const AboutSection = () => {
                 </p>
               </div>
 
-              
               <div className="space-y-4 text-gray-700 dark:text-gray-200 z-[9999]">
                 <p className="leading-relaxed text-justify ">
                   My love for computers and problem solving began at a young age

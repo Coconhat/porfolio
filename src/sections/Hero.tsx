@@ -63,22 +63,12 @@ export const HeroSection = () => {
             </h1>
 
             <p className="mt-2 text-gray-400 md:text-lg ">
-              <MaskContainer
-                revealText={
-                  <p className="mt-2 text-gray-400 md:text-lg">
-                    Hi! I&rsquo;m Nhat Vu I&rsquo;m a 2nd year De La Salle Lipa
-                    student who loves building tools to solve real-world
-                    problems. I enjoy taking on challenges that push me to learn
-                    new skills while creating solutions that matter.
-                  </p>
-                }
-                className=" text-white dark:text-black"
-              >
-                As a developer I thrive on turning{" "}
-                <span className="text-blue-500"> ideas into impact.</span>{" "}
-                Whether it&apos;s coding tools or challenges
-                <span className="text-blue-500"></span>.
-              </MaskContainer>
+              <p className="mt-2 text-gray-400 md:text-lg">
+                Hi! I&rsquo;m Nhat Vu I&rsquo;m a 2nd year De La Salle Lipa
+                student who loves building tools to solve real-world problems. I
+                enjoy taking on challenges that push me to learn new skills
+                while creating solutions that matter.
+              </p>
             </p>
           </div>
 
