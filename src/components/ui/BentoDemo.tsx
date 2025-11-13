@@ -222,6 +222,8 @@ export function BentoDemo() {
   const [selected, setSelected] = useState<number | null>(null);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") setModalOpen(false);
     }

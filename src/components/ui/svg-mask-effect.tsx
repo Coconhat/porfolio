@@ -30,10 +30,13 @@ export const MaskContainer = ({
   };
 
   useEffect(() => {
-    containerRef.current.addEventListener("mousemove", updateMousePosition);
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener("mousemove", updateMousePosition);
+    }
     return () => {
-      if (containerRef.current) {
-        containerRef.current.removeEventListener(
+      if (container) {
+        container.removeEventListener(
           "mousemove",
           updateMousePosition
         );
@@ -63,16 +66,18 @@ export const MaskContainer = ({
           WebkitMaskRepeat: "no-repeat",
           WebkitMaskSize: `${maskSize}px`,
         }}
-        animate={{
-          maskPosition: `${mousePosition.x - maskSize / 2}px ${
-            mousePosition.y - maskSize / 2
-          }px`,
-          WebkitMaskPosition: `${mousePosition.x - maskSize / 2}px ${
-            mousePosition.y - maskSize / 2
-          }px`,
-          maskSize: `${maskSize}px`,
-          WebkitMaskSize: `${maskSize}px`,
-        }}
+        animate={
+          {
+            maskPosition: `${mousePosition.x - maskSize / 2}px ${
+              mousePosition.y - maskSize / 2
+            }px`,
+            WebkitMaskPosition: `${mousePosition.x - maskSize / 2}px ${
+              mousePosition.y - maskSize / 2
+            }px`,
+            maskSize: `${maskSize}px`,
+            WebkitMaskSize: `${maskSize}px`,
+          } as any
+        }
         transition={{
           maskSize: { duration: 0.3, ease: "easeInOut" },
           maskPosition: { duration: 0.15, ease: "linear" },

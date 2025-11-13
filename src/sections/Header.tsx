@@ -41,9 +41,11 @@ export function NavbarDemo() {
             <NavbarButton
               variant="primary"
               onClick={() => {
-                const contactSection = document.querySelector("#contact");
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: "smooth" });
+                if (typeof window !== "undefined") {
+                  const contactSection = document.querySelector("#contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
                 }
               }}
             >
