@@ -5,6 +5,7 @@ import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import { BentoDemo } from "@/components/ui/BentoDemo";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
       <section id="contact">
         <Footer />
       </section>
+
+      <ProgressiveBlur height="20%" position="bottom" />
     </div>
   );
 }

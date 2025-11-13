@@ -2,7 +2,17 @@
 
 import React, { useEffect, useState } from "react";
 import { FileTextIcon } from "@radix-ui/react-icons";
-import { Share2, Rocket, Database, Video, Activity } from "lucide-react";
+import {
+  Share2,
+  Rocket,
+  Database,
+  Video,
+  Activity,
+  X,
+  ExternalLink,
+  Calendar,
+  Building2,
+} from "lucide-react";
 import githubprofile from "@/assets/images/gitgit2.png";
 import mediatrix from "@/assets/images/mediatrix.png";
 import animo from "@/assets/images/animo.png";
@@ -13,7 +23,6 @@ import { BentoCard } from "@/components/ui/bento-grid";
 import dhFarm from "@/assets/images/dh-farm.png";
 import spotLight from "@/assets/images/spotlight.png";
 import studentapi from "@/assets/images/studentapi.png";
-import { profile } from "console";
 
 const features = [
   {
@@ -76,7 +85,7 @@ const features = [
     description:
       "Video streaming platform for student organizations with Cloudflare R2 integration.",
     href: "https://github.com/dlsl-animodev/project-spotlight",
-    cta: "Private",
+    cta: "View Code",
     className: "col-span-3 lg:col-span-2",
     background: (
       <Image
@@ -88,7 +97,6 @@ const features = [
       />
     ),
   },
-
   {
     Icon: Rocket,
     name: "Student API",
@@ -127,7 +135,6 @@ const features = [
   },
 ];
 
-// Additional project data for the modal. Keys match feature.name where applicable.
 const projectDetails: Record<
   string,
   {
@@ -135,11 +142,15 @@ const projectDetails: Record<
     yearAffil?: string;
     bullets: string[];
     type: "personal" | "client" | "organization" | "other";
+    year?: string;
+    organization?: string;
   }
 > = {
   "Animo Chat": {
     title: "AnimoChat.com",
     yearAffil: "2025 · PERSONAL PROJECT",
+    year: "2025",
+    organization: "Personal Project",
     bullets: [
       "Designed and deployed a secure, anonymous chat application using Next.js and Supabase.",
       "Achieved 30,000+ visitors and 90,000+ page views within 6 months of launch.",
@@ -147,8 +158,10 @@ const projectDetails: Record<
     type: "personal",
   },
   "Ancillary Communication Platform": {
-    title: "Ancillary Communication Platform · MEDIATRIX ANCILLARY DEPARTMENT",
+    title: "Ancillary Communication Platform",
     yearAffil: "2025 · CLIENT/PROTOTYPE",
+    year: "2025",
+    organization: "Mediatrix Ancillary Department",
     bullets: [
       "Developed a frontend prototype to streamline finance and communication processes.",
     ],
@@ -157,6 +170,8 @@ const projectDetails: Record<
   "DH Magpantay Farm System": {
     title: "DH Magpantay Farm System",
     yearAffil: "2024 · CLIENT PROJECT",
+    year: "2024",
+    organization: "Client Project",
     bullets: [
       "Developed a farm management system for 200+ cattle with health, breeding, and feeding tracking plus Resend-based alerts.",
       "Built an AI agent that can read and provide information from farm records, assisting staff with quick access to cattle health, breeding, and feeding data.",
@@ -164,8 +179,10 @@ const projectDetails: Record<
     type: "client",
   },
   "Project Spotlight - Mini Netflix": {
-    title: "Mini Netflix Platform · DE LA SALLE LIPA",
+    title: "Mini Netflix Platform",
     yearAffil: "2024 · ORGANIZATION PROJECT",
+    year: "2024",
+    organization: "De La Salle Lipa",
     bullets: [
       "Built a video streaming platform for student organization content using Next.js and Firebase.",
       "Implemented video storage and delivery using Cloudflare R2 for optimized content distribution.",
@@ -173,15 +190,17 @@ const projectDetails: Record<
     type: "organization",
   },
   "Student API": {
-    title: "Student API · DE LA SALLE LIPA",
+    title: "Student API",
     yearAffil: "2025 · ORGANIZATION PROJECT",
+    year: "2025",
+    organization: "De La Salle Lipa",
     bullets: [
       "Developed a RESTful API for capturing student ID NFC tags for attendance tracking using Express.",
       "Implemented secure data validation and database storage for efficient data caching.",
     ],
     type: "organization",
   },
-  "More Projects": {
+  "View more projects": {
     title: "More Projects",
     yearAffil: "",
     bullets: [
@@ -189,6 +208,13 @@ const projectDetails: Record<
     ],
     type: "other",
   },
+};
+
+const typeColors = {
+  personal: "from-blue-500 to-cyan-500",
+  client: "from-purple-500 to-pink-500",
+  organization: "from-orange-500 to-red-500",
+  other: "from-gray-500 to-slate-500",
 };
 
 export function BentoDemo() {
@@ -199,8 +225,14 @@ export function BentoDemo() {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") setModalOpen(false);
     }
-    if (modalOpen) document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    if (modalOpen) {
+      document.addEventListener("keydown", onKey);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "unset";
+    };
   }, [modalOpen]);
 
   function openModal(idx: number) {
@@ -233,12 +265,9 @@ export function BentoDemo() {
         </p>
       </div>
 
-      {/* custom grid: 3 per row on large screens, with margin and gap */}
       <div className="mx-4 sm:mx-6 lg:mx-12">
-        {/* bento-style grid — 3 columns on large screens, consistent card heights to match original bento appearance */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           {features.map((feature, idx) => (
-            // apply feature.className if provided (keeps compatibility) and enforce a uniform bento card height
             <div
               key={idx}
               className={cn(
@@ -246,15 +275,11 @@ export function BentoDemo() {
                 feature.className || ""
               )}
             >
-              {/* fixed height container so every card matches the original bento sizing */}
               <div className="h-72 sm:h-80 lg:h-96 flex flex-col">
-                {/* BentoCard should stretch to fill this container; pass a className to ensure full height */}
                 <BentoCard
                   {...feature}
                   className={cn(feature.className || "", "h-full")}
                 />
-
-                {/* full-card clickable overlay to open the modal */}
                 <button
                   type="button"
                   onClick={() => openModal(idx)}
@@ -267,83 +292,132 @@ export function BentoDemo() {
         </div>
       </div>
 
-      {/* Modal: show additional info */}
       {modalOpen && selected !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-in fade-in duration-200"
+          onClick={closeModal}
+        >
           <div
-            className="absolute inset-0 bg-black/50"
+            className="absolute inset-0 bg-black/60 backdrop-blur-md"
             aria-hidden
-            onClick={closeModal}
           />
 
           <div
             role="dialog"
             aria-modal="true"
             aria-labelledby="project-title"
-            className="relative z-60 w-full max-w-3xl rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-2xl"
+            className="relative z-60 w-full max-w-4xl rounded-3xl bg-white dark:bg-gray-900 shadow-2xl animate-in zoom-in-95 duration-200 overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h3 id="project-title" className="text-2xl font-semibold">
-                  {selectedDetail?.title || selectedFeature?.name}
-                </h3>
-                {selectedDetail?.yearAffil && (
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {selectedDetail.yearAffil}
-                  </p>
-                )}
-              </div>
+            {/* Gradient header */}
+            <div
+              className={cn(
+                "h-2 bg-gradient-to-r",
+                selectedDetail
+                  ? typeColors[selectedDetail.type]
+                  : typeColors.other
+              )}
+            />
 
-              <div className="ml-auto flex items-center gap-2">
-                {selectedFeature?.href && (
-                  <a
-                    href={selectedFeature.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center rounded-md border px-3 py-1 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+            {/* Content */}
+            <div className="p-8">
+              {/* Header section */}
+              <div className="flex items-start gap-6 mb-8">
+                {/* Icon with gradient background */}
+                <div
+                  className={cn(
+                    "flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br flex items-center justify-center shadow-lg",
+                    selectedDetail
+                      ? typeColors[selectedDetail.type]
+                      : typeColors.other
+                  )}
+                >
+                  {selectedFeature && (
+                    <selectedFeature.Icon className="w-8 h-8 text-white" />
+                  )}
+                </div>
+
+                {/* Title and meta */}
+                <div className="flex-1 min-w-0">
+                  <h3
+                    id="project-title"
+                    className="text-3xl font-bold text-gray-900 dark:text-white mb-2"
                   >
-                    {selectedFeature.cta || "Open"}
-                  </a>
-                )}
+                    {selectedDetail?.title || selectedFeature?.name}
+                  </h3>
 
+                  {/* Meta badges */}
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    {selectedDetail?.year && (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {selectedDetail.year}
+                      </span>
+                    )}
+                    {selectedDetail?.organization && (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <Building2 className="w-3.5 h-3.5" />
+                        {selectedDetail.organization}
+                      </span>
+                    )}
+                  </div>
+
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    {selectedFeature?.description}
+                  </p>
+                </div>
+
+                {/* Close button */}
                 <button
                   type="button"
                   onClick={closeModal}
                   aria-label="Close"
-                  className="rounded-full border p-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="flex-shrink-0 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                 >
-                  ×
+                  <X className="w-5 h-5 text-gray-500" />
                 </button>
               </div>
-            </div>
 
-            <div className="mt-4 space-y-3">
-              <p className="text-sm text-muted-foreground">
-                {selectedFeature?.description}
-              </p>
-
-              {selectedDetail ? (
-                <ul className="list-disc pl-5 mt-2 space-y-2 text-sm">
-                  {selectedDetail.bullets.map((b, i) => (
-                    <li key={i}>{b}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-sm text-muted-foreground mt-2">
-                  No additional information available.
-                </p>
+              {/* Details section */}
+              {selectedDetail && (
+                <div className="mb-8">
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                    <div className="w-1 h-5 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
+                    Key Highlights
+                  </h4>
+                  <ul className="space-y-3">
+                    {selectedDetail.bullets.map((bullet, i) => (
+                      <li
+                        key={i}
+                        className="flex gap-3 text-gray-700 dark:text-gray-300 leading-relaxed"
+                      >
+                        <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               )}
-            </div>
 
-            <div className="mt-6 flex justify-end">
-              <button
-                type="button"
-                onClick={closeModal}
-                className="rounded-md border px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
-              >
-                Close
-              </button>
+              {/* Action button */}
+              {selectedFeature?.href && selectedFeature.href !== "#" && (
+                <div className="flex justify-end pt-4 border-t border-gray-200 dark:border-gray-800">
+                  <a
+                    href={selectedFeature.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={cn(
+                      "inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-medium transition-all hover:shadow-lg hover:scale-105 bg-gradient-to-r",
+                      selectedDetail
+                        ? typeColors[selectedDetail.type]
+                        : typeColors.other
+                    )}
+                  >
+                    {selectedFeature.cta || "View Project"}
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
