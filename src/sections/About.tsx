@@ -130,10 +130,7 @@ const toolboxItems = [
     title: "Cloudflare",
     iconType: cloudflareIcon,
   },
-  {
-    title: "Cloudflare",
-    iconType: cloudflareIcon,
-  },
+
   {
     title: "ExpressJS",
     iconType: expressjsIcon,
